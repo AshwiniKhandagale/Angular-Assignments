@@ -5,12 +5,12 @@ Pipes are an incredibly useful and clean way to transform data in the template i
 
 ## Custom Pipe :-
 Create pipe using "ng g pipe PipeName".
-        ```js
+        ```python
           import { Pipe, PipeTransform } from '@angular/core';
               @Pipe({
                  name: 'wordcount'
                  })s
-         export class WordcountPipe implements PipeTransform {
+          export class WordcountPipe implements PipeTransform {
                transform(value: any, args?: any): any {
                return value.trim().split(/\s+/).length;
                }
