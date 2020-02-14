@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <br><hr>
+  <div [ngStyle]="{color:(isColorChange?'red':'blue') }">
+   NgStye DIrective
+  </div>
+  <br>
+  <button (click)="changeColor()">change style</button>
+  <br>
+  <hr>
+  <!-- (mouseenter)="changeBlue()" -->
+  <div [ngClass]="{red:isRedColor,yellow: isYellowColor ,blue : isBlueColor}" (mouseover)="changeYellow()" >
+    NgClass Directive
+  </div>
+  <br>
+  <button (click)="changeClass()" >Change class</button>
+  <br>
+  <hr>
+  <button appDropdown class="dropdown-btn" type="button">Freinds</button>
+
+  <div class="dropdown">
+    <a   class="dropdown-item">Ashwini</a>
+    <a class="dropdown-item">Pranali</a>
+    <a  class="dropdown-item">Pragati</a>
+  </div>
+  <hr>
+  <br>
+ 
+  <div >  <span appColorChange>@HostListener  Used For change color</span> </div>
+  <br>
+  <hr>
+  </div>
+
