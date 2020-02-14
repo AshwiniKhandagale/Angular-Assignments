@@ -1,11 +1,11 @@
 # Angular-Assignments
 
-#Pipe :-
+# Pipe :-
 Pipes are an incredibly useful and clean way to transform data in the template in Angular. Their are two types of pipe. 1. Built In Pipe 2. Custom Pipe
 
-#Custom Pipe :-
+## Custom Pipe :-
 Create pipe using "ng g pipe PipeName".
-          ''' js
+        ```js
           import { Pipe, PipeTransform } from '@angular/core';
               @Pipe({
                  name: 'wordcount'
@@ -14,6 +14,6 @@ Create pipe using "ng g pipe PipeName".
                transform(value: any, args?: any): any {
                return value.trim().split(/\s+/).length;
                }
-               '''
+              ```
 
 }
