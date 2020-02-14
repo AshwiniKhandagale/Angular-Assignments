@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <span style="color: darkred;"><B>ngIF</B></span>
+  <br>
+  <hr>
+  <div *ngIf="isShow">
+    <span style="color: crimson;"> VISIBLE</span>
+  </div>
+  <br>
+  <button (click)="onClick()"> Toggle </button>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <span style="color: darkred;"><B>ngFor</B></span>
+      <ul>
+        <li *ngFor="let item of personInfo, let i = index">
+          <ul>
+            <li><span>{{i+1}}</span></li>
+            <li><span>{{item.name}}</span></li>
+            <li> <span>{{item.city}}</span></li>
+            <br>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <div class="col-6">
+      <span style="color: darkred;"><B>ngSwitch</B></span>
+      <ul *ngFor="let item of personInfo, let i = index" [ngSwitch]="item.country">
+
+        <li *ngSwitchCase="'USA'">
+          <div>
+            <span>{{item.name}}</span> <br>
+            <span>{{item.city}}</span>
+          </div>
+        </li>
+        <li *ngSwitchCase="'IND'">
+          <div>
+            <span>{{item.name}}</span> <br>
+            <span>{{item.city}}</span>
+          </div>
+        </li>
+        <li *ngSwitchCase="'CHINA'">
+          <div>
+            <span>{{item.name}}</span> <br>
+            <span>{{item.city}}</span>
+          </div>
+        </li>
+        <li *ngSwitchDefault>
+          <div>
+            <span>ASH</span>
+            <span>Bhavdhan</span>
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+
+</div>
