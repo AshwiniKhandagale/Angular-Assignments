@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CapitalizePipe } from './capitalize.pipe';
 import { SquarePipe } from './square.pipe';
 import { StrTrimPipe } from './str-trim.pipe';
+import { ReverseStrPipe } from './reverse-str.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CapitalizePipe,
     SquarePipe,
-    StrTrimPipe
+    StrTrimPipe,
+    ReverseStrPipe
   ],
   imports: [
     BrowserModule,
